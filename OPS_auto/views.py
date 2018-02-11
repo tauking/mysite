@@ -4,8 +4,8 @@ from OPS_auto.scripts import getinfo
 
 def index(request):
     t=getinfo.getMemCpu()
-    title="内存:"+str(t[0])+"%\bCPU:"+str(t[1])+"%"
-    content = {"content":"hello OPS_auto!","title":title}
+    title="hello"
+    content = {"content":"凤凤和阳阳，新年快乐!","title":title}
     return render(request,'OPS_auto/index.html' ,content)
 
 i = 1

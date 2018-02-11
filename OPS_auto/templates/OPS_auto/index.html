@@ -3,9 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ title }}</title>
+    <style>
+    #hello{
+        text-align: center;
+        margin:auto 0;
+        color:red;
+        font-size:2em;
+        border-style:outset;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    </style>
 </head>
 <body>
-{{ content }}
-<div>第<div type="input">{{ cont }}</div>个能被2或3整除的数是{{ num }}</div>
+<div id="hello">{{ content }}</div>
 </body>
 </html>
