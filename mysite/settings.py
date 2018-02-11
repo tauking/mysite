@@ -25,7 +25,7 @@ SECRET_KEY = 'tah=pe(29)fq&9%-m9a!vs(g2tleh)ag&&13oh9jnjec!cy!dh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["tauking.pythonanywhere.com",]
+ALLOWED_HOSTS = []
 
 
 # Application definition
