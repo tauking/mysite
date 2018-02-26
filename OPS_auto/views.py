@@ -5,7 +5,7 @@ from OPS_auto.scripts import getinfo
 def index(request):
     t=getinfo.getMemCpu()
     title="hello"
-    content = {"content":"凤凤和阳阳，新年快乐!","title":title}
+    content = {"content":"新的一年，新的一天!","title":title}
     return render(request,'OPS_auto/index.html' ,content)
 
 i = 1
