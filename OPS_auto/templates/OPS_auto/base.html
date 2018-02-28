@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- icon -->
+    <link rel="icon" href="{% static 'production/images/favicon.ico' %}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{% static 'production/images/favicon.ico' %}" type="image/x-icon" />
+
+    <title>开始吧! | </title>
+
+    <!-- Bootstrap -->
+    <link href="{% static 'bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="{% static 'font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="{% static 'nprogress/nprogress.css' %}" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="{% static 'build/css/custom.min.css' %}" rel="stylesheet">
+    {% block headscript %}{% endblock %}
+</head>
+
+<body class="nav-md">
+{% block container %}{% endblock %}
+<!-- jQuery -->
+<script src="{% static 'jquery/dist/jquery.min.js' %}"></script>
+<!-- Bootstrap -->
+<script src="{% static 'bootstrap/dist/js/bootstrap.min.js' %}"></script>
+<!-- FastClick -->
+<script src="{% static 'fastclick/lib/fastclick.js' %}"></script>
+<!-- NProgress -->
+<script src="{% static 'nprogress/nprogress.js' %}"></script>
+
+<!-- Custom Theme Scripts -->
+<script src="{% static 'build/js/custom.min.js' %}"></script>
+{% block bodyscript %}{% endblock %}
+</body>
+</html>

@@ -1,37 +1,12 @@
-<!DOCTYPE html>
+{% extends 'OPS_auto/base.html' %}
 {% load staticfiles %}
-<html lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- icon -->
-    <link rel="icon" href="{% static 'production/images/favicon.ico' %}" type="image/x-icon" />
-    <link rel="shortcut icon" href="{% static 'production/images/favicon.ico' %}" type="image/x-icon" />
-
-    <title>开始吧! | </title>
-
-    <!-- Bootstrap -->
-    <link href="{% static 'bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="{% static 'font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="{% static 'nprogress/nprogress.css' %}" rel="stylesheet">
-
-    <!-- Custom Theme Style -->
-    <link href="{% static 'build/css/custom.min.css' %}" rel="stylesheet">
-</head>
-
-<body class="nav-md">
+{% block container %}
 <div class="container body">
     <div class="main_container">
         <div class="col-md-3 left_col">
             <div class="left_col scroll-view">
                 <div class="navbar nav_title" style="border: 0;">
-                    <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Admin系统!</span></a>
+                    <a href="" class="site_title"><i class="fa fa-paw"></i> <span>Admin系统!</span></a>
                 </div>
 
                 <div class="clearfix"></div>
@@ -198,7 +173,63 @@
                 <div class="clearfix"></div>
 
                 <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="col-md-4 col-sm-6 col-xs-6">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>自定义</h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                           aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">设置</a>
+                                            </li>
+                                            <li><a href="#">设置</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                自定义内容 ...
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-6">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>自定义</h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                           aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">设置</a>
+                                            </li>
+                                            <li><a href="#">设置</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                自定义内容 ...
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-6">
                         <div class="x_panel">
                             <div class="x_title">
                                 <h2>自定义</h2>
@@ -226,6 +257,37 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>自定义</h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                           aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">设置</a>
+                                            </li>
+                                            <li><a href="#">设置</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                自定义内容 ...
+                            </div>
+                        </div>
+                    </div>
+                    {% include 'OPS_auto/widget1.html' %}
+                </div>
             </div>
         </div>
         <!-- /page content -->
@@ -240,17 +302,4 @@
         <!-- /footer content -->
     </div>
 </div>
-
-<!-- jQuery -->
-<script src="{% static 'jquery/dist/jquery.min.js' %}"></script>
-<!-- Bootstrap -->
-<script src="{% static 'bootstrap/dist/js/bootstrap.min.js' %}"></script>
-<!-- FastClick -->
-<script src="{% static 'fastclick/lib/fastclick.js' %}"></script>
-<!-- NProgress -->
-<script src="{% static 'nprogress/nprogress.js' %}"></script>
-
-<!-- Custom Theme Scripts -->
-<script src="{% static 'build/js/custom.min.js' %}"></script>
-</body>
-</html>
+{% endblock %}
