@@ -25,7 +25,7 @@ SECRET_KEY = 'tah=pe(29)fq&9%-m9a!vs(g2tleh)ag&&13oh9jnjec!cy!dh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["tauking.pythonanywhere.com",]
+ALLOWED_HOSTS = ["tauking.pythonanywhere.com","localhost",]
 
 
 # Application definition
@@ -126,5 +126,8 @@ USE_TZ = False
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
-
+STATIC_PATH = os.path.join(BASE_DIR,'static')
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    STATIC_PATH,
+)
